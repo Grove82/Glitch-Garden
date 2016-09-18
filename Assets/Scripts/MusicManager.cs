@@ -13,7 +13,7 @@ public class MusicManager : MonoBehaviour {
 	}
 
 	void Start () {
-		Scene scene = SceneManager.GetActiveScene();
+		//Scene scene = SceneManager.GetActiveScene();
 		musicPlayer = GetComponent<AudioSource> ();
 	}
 	
@@ -26,5 +26,9 @@ public class MusicManager : MonoBehaviour {
 			musicPlayer.loop = true;
 			musicPlayer.Play ();
 		}
+	}
+
+	public void SetVolume(float volume) {
+		musicPlayer.volume = volume;
 	}
 }
